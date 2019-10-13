@@ -5,7 +5,10 @@ using UnityEngine;
 public class Sword : Weapon
 {
     public GameObject Owner;
-
+    public AudioSource aSource;
+    public AudioClip slashA;
+    public AudioClip pickupA;
+    public AudioClip throwA;
     [SerializeField]
     public Transform GunTip;
 
@@ -43,6 +46,8 @@ public class Sword : Weapon
         if (Time.time > nextShot && ammo != 0) {
             nextShot = Time.time + fireRate;
             GameObject firedBullet = Instantiate(Bullet, GunTip.position, GunTip.rotation);
+            aSource.PlayOneShot(slashA);
+            aSource.Play();
             firedBullet.GetComponent<Rigidbody2D>().velocity = GunTip.right * firedBullet.GetComponent<SwordSlash>().bulletSpeed;
             if (ammo > 0) {
                 ammo -= 1;
@@ -56,6 +61,8 @@ public class Sword : Weapon
         transform.SetParent(null, true);
         Owner.GetComponent<PlayerBehaviour>().weapon = null;
         Owner = null;
+        aSource.PlayOneShot(throwA);
+        aSource.Play();
         rb2d.velocity = transform.right * throwSpeed;
         dps = 1000;
     }
@@ -72,7 +79,8 @@ public class Sword : Weapon
         );
 
         transform.right = mouseDirection;
-
+        aSource.PlayOneShot(pickupA);
+        aSource.Play();
         transform.parent = owner.transform;
         transform.localPosition = new Vector3(offsetX, offsetY, 0);
     }

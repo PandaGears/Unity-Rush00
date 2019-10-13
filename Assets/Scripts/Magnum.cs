@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Magnum : Weapon
 {
+    
+    public AudioClip fireA;
+     public AudioClip pickupA;
+     public AudioClip throwA;
+    public AudioSource aSource;
     public GameObject Owner;
 
     [SerializeField]
@@ -22,6 +27,7 @@ public class Magnum : Weapon
 
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -43,6 +49,8 @@ public class Magnum : Weapon
         if (Time.time > nextShot && ammo != 0) {
             nextShot = Time.time + fireRate;
             GameObject firedBullet = Instantiate(Bullet, GunTip.position, GunTip.rotation);
+            aSource.PlayOneShot(fireA);
+            aSource.Play();
             firedBullet.GetComponent<Rigidbody2D>().velocity = GunTip.right * firedBullet.GetComponent<MagnumBullet>().bulletSpeed;
             if (ammo > 0) {
                 ammo -= 1;
@@ -56,6 +64,8 @@ public class Magnum : Weapon
         transform.SetParent(null, true);
         Owner.GetComponent<PlayerBehaviour>().weapon = null;
         Owner = null;
+        aSource.PlayOneShot(throwA);
+        aSource.Play();
         rb2d.velocity = transform.right * throwSpeed;
         dps = 1000;
     }
@@ -70,7 +80,8 @@ public class Magnum : Weapon
             mousePosition.x - transform.position.x,
             mousePosition.y - transform.position.y
         );
-
+            aSource.PlayOneShot(pickupA);
+            aSource.Play();
         transform.right = mouseDirection;
 
         transform.parent = owner.transform;

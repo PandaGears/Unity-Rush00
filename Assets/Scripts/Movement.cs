@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-	public bool mUp;
+    public bool mUp;
     public bool mDown;
     public bool mLeft;
     public bool mRight;
-    public Rigidbody2D rb2d;
-    public float speed = 50.0f;
-    public float slowRate = 0.9f;
+    private Rigidbody2D rb2d;
+    public float speed = 50.0F;
+    public float slowRate = 0.9F;
     private Vector2 mouseDirection;
 
-	void Start()
+    void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     {
         checkKeys();
         faceMouse();
-        controlSpeed();
+       	controlSpeed();
     }
 
     void controlSpeed() {
