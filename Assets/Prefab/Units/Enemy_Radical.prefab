@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: -512286941351808304}
   - component: {fileID: 8832744247638644334}
   m_Layer: 8
-  m_Name: Enemy
+  m_Name: Enemy_Radical
   m_TagString: Enemy
   m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  Enemyhp: 1
+  Enemyhp: 5
   stoppingDistance: 5
   noticeDistance: 10
   effect: {fileID: 1798651559893842, guid: fc6d07069de78457c97b0592cd0ccd02, type: 3}
