@@ -6,17 +6,8 @@ public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField]
     public Weapon weapon;
-
-    [SerializeField]
-    private Transform GunTip;
-
-    [SerializeField]
-    public GameObject bullet;
-
-    public Vector2 bulletPos;
     public Collider2D droppedWeapon;
-    public float fireRate = 0.5f;
-    public float nextShot = 0.0f;
+    public int health = 1;
 
     void Start()
     {
@@ -34,7 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.E)) {
-            if (droppedWeapon != null) {
+            if (droppedWeapon != null && weapon == null) {
                 weapon = droppedWeapon.GetComponent<Weapon>();
                 weapon.equip(gameObject);
             }
@@ -44,7 +35,16 @@ public class PlayerBehaviour : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Weapon") {
-            droppedWeapon = collider;
+            if (weapon != null) {
+                if (weapon.GetType() == collider.gameObject.GetComponent<Weapon>().GetType()) {
+                    if (weapon.ammo != weapon.maxAmmo) {
+                        weapon.ammo = weapon.maxAmmo;
+                        Destroy(collider.gameObject);
+                    }
+                }
+            } else {
+                droppedWeapon = collider;
+            }
         }
     }
 
