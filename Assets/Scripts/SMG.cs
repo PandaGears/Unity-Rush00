@@ -5,10 +5,7 @@ using UnityEngine;
 public class SMG : Weapon
 {
     public GameObject Owner;
-    public AudioClip fireA;
-    public AudioClip pickupA;
-    public AudioClip throwA;
-    public AudioSource aSource;
+
     [SerializeField]
     public Transform GunTip;
 
@@ -46,8 +43,6 @@ public class SMG : Weapon
         if (Time.time > nextShot && ammo != 0) {
             nextShot = Time.time + fireRate;
             GameObject firedBullet = Instantiate(Bullet, GunTip.position, GunTip.rotation);
-            aSource.PlayOneShot(fireA);
-            aSource.Play();
             firedBullet.GetComponent<Rigidbody2D>().velocity = GunTip.right * firedBullet.GetComponent<SMGBullet>().bulletSpeed;
             if (ammo > 0) {
                 ammo -= 1;
@@ -61,8 +56,6 @@ public class SMG : Weapon
         transform.SetParent(null, true);
         Owner.GetComponent<PlayerBehaviour>().weapon = null;
         Owner = null;
-        aSource.PlayOneShot(throwA);
-        aSource.Play();
         rb2d.velocity = transform.right * throwSpeed;
         dps = 750;
     }
@@ -71,17 +64,8 @@ public class SMG : Weapon
         rb2d.simulated = false;
         this.Owner = owner;
         transform.position = owner.transform.position;
-
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mouseDirection = new Vector2(
-            mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y
-        );
-
-        transform.right = mouseDirection;
-            aSource.PlayOneShot(pickupA);
-            aSource.Play();
         transform.parent = owner.transform;
         transform.localPosition = new Vector3(offsetX, offsetY, 0);
+        CopyRotation(owner, new Vector3(0, 0, offsetRot));
     }
 }
