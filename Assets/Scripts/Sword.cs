@@ -71,8 +71,6 @@ public class Sword : Weapon
         rb2d.simulated = false;
         this.Owner = owner;
         transform.position = owner.transform.position;
-<<<<<<< HEAD
-=======
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mouseDirection = new Vector2(
@@ -83,9 +81,7 @@ public class Sword : Weapon
         transform.right = mouseDirection;
         aSource.PlayOneShot(pickupA);
         aSource.Play();
->>>>>>> 2e8b7fd7c07cb0e3cac670efda3e8a2f53904f21
         transform.parent = owner.transform;
         transform.localPosition = new Vector3(offsetX, offsetY, 0);
-        CopyRotation(owner, new Vector3(0, 0, offsetRot));
     }
 }
