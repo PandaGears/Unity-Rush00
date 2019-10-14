@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1644379638328577068}
   - component: {fileID: 6168534238988939871}
   m_Layer: 0
-  m_Name: Magnum
+  m_Name: Magnum_enemy
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4dde15299a44981a4b1a61369e7767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 6
-  ammo: 6
+  maxAmmo: 99
+  ammo: 99
   fireRate: 0.25
   nextShot: 0
   Owner: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   pickupA: {fileID: 8300000, guid: bd5112458d23d48faa52fe82499275ed, type: 3}
   aSource: {fileID: 6168534238988939871}
   GunTip: {fileID: 532325000318805106}
-  Bullet: {fileID: 561010478397868387, guid: 1a512da04801742ed9a2e65c66da647d, type: 3}
+  Bullet: {fileID: 561010478397868387, guid: e83b76de43848b249b1946029a6bec1b, type: 3}
   slowRate: 0.91
   throwSpeed: 50
   offsetX: -0.15

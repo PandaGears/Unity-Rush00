@@ -233,7 +233,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: b35b90009398940e2b40da4d416ce8d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c539ddae4abc2442f95b00a6662d4655, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c7a1b5f9902674d10b7ce10392584fa9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7505dd4d65a44efd84567e52dce71fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: -512286941351808304}
   - component: {fileID: 8832744247638644334}
   m_Layer: 8
-  m_Name: Enemy_Radical
+  m_Name: Enemy_SMG
   m_TagString: Enemy
   m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -396,8 +396,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.44634956
   m_LinearDrag: 0
   m_AngularDrag: 0.06
   m_GravityScale: 0
@@ -550,13 +550,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  Enemyhp: 5
-  stoppingDistance: 3
+  Enemyhp: 15
+  stoppingDistance: 5
   noticeDistance: 10
   effect: {fileID: 1798651559893842, guid: fc6d07069de78457c97b0592cd0ccd02, type: 3}
   effect2: {fileID: 1798651559893842, guid: fc6d07069de78457c97b0592cd0ccd02, type: 3}
   hitsound: {fileID: 8300000, guid: 97a20ba6d68d94fbaaefdd3faf6b524d, type: 3}
-  death: {fileID: 8300000, guid: 61f34fee662fe406994204e8723ee10c, type: 3}
+  death: {fileID: 8300000, guid: a634b485d3ffc44c7b52cab228a8ce8e, type: 3}
   aSource: {fileID: 82465713162474838}
   weapon: {fileID: 0}
   RotationSpeed: 0
@@ -586,7 +586,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b41be59013c394cd78b4482ac97ea233, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -743,7 +743,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7484b4fcae9dc4428b0a04538254a985, type: 3}
-  m_Color: {r: 1, g: 0.5516948, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -134,14 +134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9425ba6b4c64a69b8c87d3f1a628f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 60
-  ammo: 60
+  maxAmmo: 100
+  ammo: 100
   fireRate: 0.06
   nextShot: 0
   Owner: {fileID: 0}
-  fireA: {fileID: 8300000, guid: 768dfceca5844478083f86855178de76, type: 3}
-  pickupA: {fileID: 8300000, guid: bd5112458d23d48faa52fe82499275ed, type: 3}
+  fireA: {fileID: 8300000, guid: d27266dbeb98e4717a95f991054745c7, type: 3}
   throwA: {fileID: 8300000, guid: bc2f9fa344b7e4fc4980b4e30e33cb08, type: 3}
+  pickupA: {fileID: 8300000, guid: bd5112458d23d48faa52fe82499275ed, type: 3}
   aSource: {fileID: 4221646596845922452}
   GunTip: {fileID: 692779762145623152}
   Bullet: {fileID: 6281021162124780958, guid: 5c9989cb34a7c4ab6ad06f9c1bcdd251, type: 3}

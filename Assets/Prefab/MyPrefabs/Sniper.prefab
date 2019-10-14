@@ -140,8 +140,8 @@ MonoBehaviour:
   nextShot: 0
   Owner: {fileID: 0}
   fireA: {fileID: 8300000, guid: 4bd7b009e25cb44b788180f5560e4779, type: 3}
-  pickupA: {fileID: 8300000, guid: bd5112458d23d48faa52fe82499275ed, type: 3}
   throwA: {fileID: 8300000, guid: bc2f9fa344b7e4fc4980b4e30e33cb08, type: 3}
+  pickupA: {fileID: 8300000, guid: bd5112458d23d48faa52fe82499275ed, type: 3}
   aSource: {fileID: -3699833555349040832}
   GunTip: {fileID: 6452033876218761132}
   Bullet: {fileID: 7183913015045628019, guid: 0447e838b42cb48f8ba1be2e39b7032e, type: 3}

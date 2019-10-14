@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: -1758993864087030980}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: WeaponS
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,10 +169,10 @@ MonoBehaviour:
   fireRate: 0.45
   nextShot: 0
   Owner: {fileID: 0}
-  aSource: {fileID: -1758993864087030980}
-  slashA: {fileID: 8300000, guid: 48d68d12751aa44cb87bfa4f2ca98bb6, type: 3}
-  pickupA: {fileID: 8300000, guid: 97a20ba6d68d94fbaaefdd3faf6b524d, type: 3}
+  fireA: {fileID: 8300000, guid: 48d68d12751aa44cb87bfa4f2ca98bb6, type: 3}
   throwA: {fileID: 8300000, guid: bc2f9fa344b7e4fc4980b4e30e33cb08, type: 3}
+  pickupA: {fileID: 8300000, guid: 97a20ba6d68d94fbaaefdd3faf6b524d, type: 3}
+  aSource: {fileID: -1758993864087030980}
   GunTip: {fileID: 5212726415270035899}
   Bullet: {fileID: 8381355109002115922, guid: 308ad0f49f284419288e882e2db916bb, type: 3}
   slowRate: 0.9

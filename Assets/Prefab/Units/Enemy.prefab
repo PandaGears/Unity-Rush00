@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c7a1b5f9902674d10b7ce10392584fa9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99090477d5055427eb87bc1a91f115f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -549,15 +549,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3581fa94c88b2e49a459970073ce7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 5
   Enemyhp: 1
-  stoppingDistance: 5
+  stoppingDistance: 3
   noticeDistance: 10
   effect: {fileID: 1798651559893842, guid: fc6d07069de78457c97b0592cd0ccd02, type: 3}
   effect2: {fileID: 1798651559893842, guid: fc6d07069de78457c97b0592cd0ccd02, type: 3}
   hitsound: {fileID: 8300000, guid: 97a20ba6d68d94fbaaefdd3faf6b524d, type: 3}
-  death: {fileID: 8300000, guid: 61f34fee662fe406994204e8723ee10c, type: 3}
-  aSource: {fileID: 82465713162474838}
+  death: {fileID: 8300000, guid: 8aed53bbcb68b4702a6d7e2e06ddf294, type: 3}
+  aSource: {fileID: 8832744247638644334}
+  weapon: {fileID: 0}
+  RotationSpeed: 0
 --- !u!70 &-512286941351808304
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -584,7 +586,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 97a20ba6d68d94fbaaefdd3faf6b524d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -695,13 +697,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808079329338702}
-  m_LocalRotation: {x: -0.0073662545, y: -0.045754083, z: -0.00033739873, w: 0.99892557}
+  m_LocalRotation: {x: -0.037476953, y: -0.027254086, z: 0.70398873, w: 0.7086979}
   m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 0.74, y: 0.74, z: 0.74}
   m_Children: []
   m_Father: {fileID: 4324280067554266}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -0.845, y: -5.2450004, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.845, y: -5.2450004, z: 89.657005}
 --- !u!212 &212598297354725570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -740,8 +742,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7484b4fcae9dc4428b0a04538254a985, type: 3}
-  m_Color: {r: 1, g: 0.5516948, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4584cc037c60a488da1747a1bdc4eafd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
