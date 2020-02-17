@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MagnumBullet : MonoBehaviour
 {
-    public float bulletSpeed = 40.0f;
+    public float bulletSpeed = 20.0f;
       void OnTriggerEnter2D(Collider2D collider)
       {
             if (collider.gameObject.tag == "Obstacle") {

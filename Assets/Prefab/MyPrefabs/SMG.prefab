@@ -144,7 +144,7 @@ MonoBehaviour:
   pickupA: {fileID: 8300000, guid: bd5112458d23d48faa52fe82499275ed, type: 3}
   aSource: {fileID: 4221646596845922452}
   GunTip: {fileID: 692779762145623152}
-  Bullet: {fileID: 6281021162124780958, guid: 5c9989cb34a7c4ab6ad06f9c1bcdd251, type: 3}
+  Bullet: {fileID: 6281021162124780958, guid: d25b86ea5314e4eb0a3d254254ea1ef0, type: 3}
   slowRate: 0.92
   throwSpeed: 45
   offsetX: -0.15

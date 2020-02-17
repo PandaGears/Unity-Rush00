@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3904BA99-EBD5-30EF-E314-1BECD68661C4}</ProjectGuid>
+    <ProjectGuid>{506F0982-EE72-B6B3-B649-F69F32797CE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,8 +59,12 @@
      <Compile Include="Assets\Scripts\CameraSounds.cs" />
      <Compile Include="Assets\Scripts\enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\followCam.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Magnum.cs" />
      <Compile Include="Assets\Scripts\MagnumBullet.cs" />
+     <Compile Include="Assets\Scripts\menuscript.cs" />
+     <Compile Include="Assets\Scripts\menuscriptexit.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\SMG.cs" />
@@ -71,43 +75,38 @@
      <Compile Include="Assets\Scripts\SwordSlash.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\WeaponBasics.cs" />
+     <Compile Include="Assets\Scripts\WeaponSpawn.cs" />
      <None Include="Assets\Fonts\friday13\Font License.txt" />
      <None Include="Assets\Fonts\d3digitalism\Read Me.txt" />
      <None Include="Assets\Fonts\shoguns_clan\README.txt" />
      <None Include="Assets\Fonts\justice\justice.txt" />
      <None Include="Assets\Sprites\README.txt" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

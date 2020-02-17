@@ -7,15 +7,17 @@ public class PlayerBehaviour : MonoBehaviour
 {
     private bool haswon = false;
     private bool haslost = false;
-        public AudioClip death;
+    public AudioClip death;
     public AudioSource aSource;
     [SerializeField]
     public int health = 1; 
-
+    public int deaths;
     public Weapon weapon;
     public Text Ammodeets;
 
     public Text weapondeets;
+
+    public Text death_count;
 
     [SerializeField]
     private Transform GunTip;
@@ -25,8 +27,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public Vector2 bulletPos;
     public Collider2D droppedWeapon;
-    // public float fireRate = 0.5f;
-    // public float nextShot = 0.0f;
     public GameObject effect;
     void Start()
     {
@@ -35,6 +35,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
+        death_count.text = " KILL";
+
         if (weapon == null){
             weapondeets.text = "WEAPON : ";
 		    Ammodeets.text = "AMMO : ";
@@ -78,17 +80,21 @@ public class PlayerBehaviour : MonoBehaviour
                 FindObjectOfType<GameManager>().LostLevel();
             }
         }
-    //            else if(collider.gameObject.tag == "BulletEnemy"){
-    //         Instantiate(effect, transform.position, Quaternion.identity);
-    //          health--;
-    //          Debug.Log(health);
-    //         if (health == 0){
-    //         aSource.PlayOneShot(death);
-    //         aSource.Play();
-    //         Destroy(gameObject);
-    //    }
-    //     }
+        else if(collider.gameObject.tag == "EnemyBullet"){
+            health--;
+            Instantiate(effect, transform.position, Quaternion.identity);
+            Destroy(collider.gameObject);
+            Debug.Log(health);
+            if (health <= 0){
+            aSource.PlayOneShot(death);
+            aSource.Play();
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+            FindObjectOfType<GameManager>().LostLevel();
+            deaths++;
+       }
+        }
         else if (collider.gameObject.tag == "goal") {
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
                 FindObjectOfType<GameManager>().CompleteLevel();
             haswon = true;
         }

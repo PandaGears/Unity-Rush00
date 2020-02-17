@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Magnum : Weapon
 {
-    
-    public AudioClip fireA;
-     public AudioClip pickupA;
-     public AudioClip throwA;
-    public AudioSource aSource;
     public GameObject Owner;
-
+    public AudioClip fireA;
+    public AudioClip throwA;
+    public AudioClip pickupA;
+    public AudioSource aSource;
     [SerializeField]
     public Transform GunTip;
 
@@ -27,7 +25,6 @@ public class Magnum : Weapon
 
     void Start()
     {
-        aSource = GetComponent<AudioSource>();
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -49,9 +46,9 @@ public class Magnum : Weapon
         if (Time.time > nextShot && ammo != 0) {
             nextShot = Time.time + fireRate;
             GameObject firedBullet = Instantiate(Bullet, GunTip.position, GunTip.rotation);
+            firedBullet.GetComponent<Rigidbody2D>().velocity = GunTip.right * firedBullet.GetComponent<MagnumBullet>().bulletSpeed;
             aSource.PlayOneShot(fireA);
             aSource.Play();
-            firedBullet.GetComponent<Rigidbody2D>().velocity = GunTip.right * firedBullet.GetComponent<MagnumBullet>().bulletSpeed;
             if (ammo > 0) {
                 ammo -= 1;
             }
@@ -74,17 +71,10 @@ public class Magnum : Weapon
         rb2d.simulated = false;
         this.Owner = owner;
         transform.position = owner.transform.position;
-
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mouseDirection = new Vector2(
-            mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y
-        );
-            aSource.PlayOneShot(pickupA);
-            aSource.Play();
-        transform.right = mouseDirection;
-
         transform.parent = owner.transform;
+        aSource.PlayOneShot(pickupA);
+        aSource.Play();
         transform.localPosition = new Vector3(offsetX, offsetY, 0);
+        CopyRotation(owner, new Vector3(0, 0, offsetRot));
     }
 }

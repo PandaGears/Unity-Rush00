@@ -18,4 +18,12 @@ public abstract class Weapon : MonoBehaviour
     public abstract void fire();
     public abstract void toss();
     public abstract void equip(GameObject owner);
+
+    public void rotateWeapon() {
+
+    }
+
+    public void CopyRotation(GameObject Target, Vector3 Offset = default(Vector3)) {
+        transform.rotation = Quaternion.Euler(Offset) * Target.transform.localRotation;
+    }
 }

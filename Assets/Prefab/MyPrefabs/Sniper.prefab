@@ -144,7 +144,7 @@ MonoBehaviour:
   pickupA: {fileID: 8300000, guid: bd5112458d23d48faa52fe82499275ed, type: 3}
   aSource: {fileID: -3699833555349040832}
   GunTip: {fileID: 6452033876218761132}
-  Bullet: {fileID: 7183913015045628019, guid: 0447e838b42cb48f8ba1be2e39b7032e, type: 3}
+  Bullet: {fileID: 7183913015045628019, guid: a2e0cd56b62584636b20215d04b9def3, type: 3}
   slowRate: 0.92
   throwSpeed: 40
   offsetX: -0.15
@@ -271,7 +271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7275065067419146954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.62, y: -0.01, z: 0}
+  m_LocalPosition: {x: 0.166, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5121722566222965317}

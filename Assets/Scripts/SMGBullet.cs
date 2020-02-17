@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SMGBullet : MonoBehaviour
 {
-    public float bulletSpeed = 30.0f;
+    public float bulletSpeed = 15.0f;
 
   void OnTriggerEnter2D(Collider2D collider)
       {

@@ -5,10 +5,12 @@ using UnityEngine;
 public class Sword : Weapon
 {
     public GameObject Owner;
-    public AudioSource aSource;
-    public AudioClip slashA;
-    public AudioClip pickupA;
+
+    public AudioClip fireA;
     public AudioClip throwA;
+    public AudioClip pickupA;
+    public AudioSource aSource;
+
     [SerializeField]
     public Transform GunTip;
 
@@ -46,7 +48,7 @@ public class Sword : Weapon
         if (Time.time > nextShot && ammo != 0) {
             nextShot = Time.time + fireRate;
             GameObject firedBullet = Instantiate(Bullet, GunTip.position, GunTip.rotation);
-            aSource.PlayOneShot(slashA);
+            aSource.PlayOneShot(fireA);
             aSource.Play();
             firedBullet.GetComponent<Rigidbody2D>().velocity = GunTip.right * firedBullet.GetComponent<SwordSlash>().bulletSpeed;
             if (ammo > 0) {
@@ -70,18 +72,11 @@ public class Sword : Weapon
     public override void equip(GameObject owner) {
         rb2d.simulated = false;
         this.Owner = owner;
-        transform.position = owner.transform.position;
-
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mouseDirection = new Vector2(
-            mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y
-        );
-
-        transform.right = mouseDirection;
         aSource.PlayOneShot(pickupA);
         aSource.Play();
+        transform.position = owner.transform.position;
         transform.parent = owner.transform;
         transform.localPosition = new Vector3(offsetX, offsetY, 0);
+        CopyRotation(owner, new Vector3(0, 0, offsetRot));
     }
 }

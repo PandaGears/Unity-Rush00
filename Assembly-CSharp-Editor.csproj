@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3E399C44-53F8-6C69-AA79-56D5BB17F736}</ProjectGuid>
+    <ProjectGuid>{33E9DF47-A5FA-D0EC-94BF-8BDFE98C6E4A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -57,43 +57,37 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\AutoSnap.cs" />
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -282,7 +276,7 @@
  <HintPath>/Applications/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>/goinfre/glatega/Unity_Bootcamp/Rush/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>/goinfre/tradlof/glatega/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -641,7 +635,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{3904BA99-EBD5-30EF-E314-1BECD68661C4}</Project>
+      <Project>{506F0982-EE72-B6B3-B649-F69F32797CE8}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public Text enemydeets;
     public GameObject enemy;
     public Transform[] spawnSpots;
     private float timeBetSpawns = 0F;
@@ -21,7 +20,7 @@ public int maxEnemyCount = 8;
 
     void Update()
     {
-        enemydeets.text = enemyCount + " Enemies left!";
+
     }
     void Spawn(){
         int spawnPos = 0;
